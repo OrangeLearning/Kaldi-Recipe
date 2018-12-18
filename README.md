@@ -19,9 +19,4 @@
 
 
 
-
-
 **Orange Learning Group**
-
-
-

@@ -68,6 +68,45 @@ $$\Delta = L(S_y) + L(S_n) - L(s)$$
 
 ## 2. kaldi 实现
 
+注意前面单音素的训练之后会在 exp 文件夹下产生一个 mono 的目录，里面以 .mdl 结尾的就保存了模型的参数。
+
+为了和前面的单音素训练进行承接，这里简要说明一下中间这几个shell 脚本的作用，源码部分就先略过:
+
+1. `mkgraph.sh`
+
+    构建解码图，主要是生成了`HCLG.fst`和`words.txt`两个文件
+
+    ```bash
+    utils/mkgraph.sh data/lang_test exp/tri1 exp/tri1/graph || exit 1;
+    ```
+
+2. `decode.sh`
+
+    分别针对开发集和测试集解码
+
+    ```bash
+    # decode tri1utils/mkgraph.sh data/lang_test exp/tri1 exp/tri1/graph || exit 1;
+    steps/decode.sh --cmd "$decode_cmd" --config conf/decode.config --nj 10 \
+      exp/tri1/graph data/dev exp/tri1/decode_dev
+    steps/decode.sh --cmd "$decode_cmd" --config conf/decode.config --nj 10 \
+      exp/tri1/graph data/test exp/tri1/decode_test
+    ```
+
+3. `align_si.sh`
+
+    Veterbi 对齐
+
+    ```bash
+    # align tri1
+    steps/align_si.sh --cmd "$train_cmd" --nj 10 \
+      data/train data/lang exp/tri1 exp/tri1_ali || exit 1;
+    ```
+
+
+
+完成上面这三步之后，我们将得到训练三音素的所需要的数据。
+
+
 在kaldi 中，三音素模型这里的shell 脚本主要是`train_deltas.sh`，这个脚本的调用如下：
 
 ```bash
@@ -138,7 +177,7 @@ typedef std::vector<std::pair<EventKeyType, EventValueType> > EventType;
 >
 > 因此我们认为EventMap是从EventType到EventAnswerType的一个映射，你可以认为这是一个从上下文音素到整数索引的一个映射。
 
-注意EventMap 是一个abstract的类，无法直接初始化，因此kaldi中给出三个具体的类，在实际的使用中，我们用多态的特性这样非常方便优雅的控制了结点的类型：
+注意**EventMap** 是一个abstract的类，无法直接初始化，因此kaldi中给出三个具体的类，在实际的使用中，我们用多态的特性这样非常方便优雅的控制了结点的类型：
 
 1. ConstantEventMap: 认为它是一个决策树叶子结点。这个类存储类型EventAnswerType 的一个整数和它的映射函数常常返回这个值。 
 2. SplitEventMap:认为它是一个决策树的非叶子结点，它查询一个特定的key，和根据问题 的答案去"yes"或者"no"孩子结点。
@@ -388,7 +427,7 @@ void AccumulateTreeStats(const TransitionModel &trans_model,
 >     * 第一次 ，j变量表示的是遍历整个三音素的下标，注意到变量i总是表示一个三音素的第一个音素的位置，所以这里，i+j就是表示三音素中的某个音素的位置。这样可以解释`i + central_position`的意义
 >     * 第二次，j变量表示的遍历某个音素的全部状态，所以其上限才是`split_alignment[i + info.central_position].size()`
 >
->     通过这两次遍历就把三音素整合到一个EventMap中了，这样方便了存储和后续的操作
+>     通过这两次遍历就把三音素整合到一个EventMap中了，这样方便了存储和后续的操作。
 >
 
 

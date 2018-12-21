@@ -188,7 +188,7 @@ exit 0;
 
 #### 1.3 准备数据`aishell_data_prep.sh`
 
-传入两个参数，第一个参数是audio_shell ，第二个参数是transcript文件，这里应该是超本。
+传入两个参数，第一个参数是audio_shell ，第二个参数是transcript文件，这里应该是抄本。
 
 ```bash
 #!/bin/bash

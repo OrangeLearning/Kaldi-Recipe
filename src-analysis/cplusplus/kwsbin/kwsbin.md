@@ -1,1 +1,1 @@
-# 21. Kaldiµ×²ã C++´úÂë ¡ª¡ª `kwsbin`´úÂë½âÎö
+# 21. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `kwsbin`ä»£ç è§£æž

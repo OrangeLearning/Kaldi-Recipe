@@ -1,1 +1,1 @@
-# 41. Kaldiµ×²ã C++´úÂë ¡ª¡ª `sgmm2`´úÂë½âÎö
+# 41. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `sgmm2`ä»£ç è§£æž

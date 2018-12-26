@@ -1,4 +1,4 @@
-# 2. Kaldiµ×²ã C++´úÂë ¡ª¡ª `bin`´úÂë½âÎö
+# 2. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `bin`ä»£ç è§£æ
 
-## 2.1 `cluster-phones.cc`´úÂë
+## 2.1 `cluster-phones.cc`ä»£ç 
 

@@ -1,1 +1,1 @@
-# 27. Kaldiµ×²ã C++´úÂë ¡ª¡ª `matrix`´úÂë½âÎö
+# 27. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `matrix`ä»£ç è§£æž

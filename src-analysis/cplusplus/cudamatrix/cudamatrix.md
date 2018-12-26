@@ -1,1 +1,1 @@
-# 5. Kaldiµ×²ã C++´úÂë ¡ª¡ª `cudamatrix`´úÂë½âÎö
+# 5. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `cudamatrix`ä»£ç è§£æ

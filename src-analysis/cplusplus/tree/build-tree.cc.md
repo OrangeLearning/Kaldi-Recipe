@@ -1,4 +1,4 @@
-# 》`build-tree.cc`
+# `build-tree.cc`
 
 > build-tree 是一个包含很多的作用函数的文件
 

@@ -1,1 +1,1 @@
-# 7. Kaldiµ×²ã C++´úÂë ¡ª¡ª `doc`´úÂë½âÎö
+# 7. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `doc`ä»£ç è§£æž

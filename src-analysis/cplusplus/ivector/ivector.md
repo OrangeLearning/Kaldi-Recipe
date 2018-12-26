@@ -1,1 +1,1 @@
-# 18. Kaldiµ×²ã C++´úÂë ¡ª¡ª `ivector`´úÂë½âÎö
+# 18. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `ivector`ä»£ç è§£æž

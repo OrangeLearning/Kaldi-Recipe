@@ -1,1 +1,1 @@
-# 38. Kaldiµ×²ã C++´úÂë ¡ª¡ª `probe`´úÂë½âÎö
+# 38. Kaldiåº•å±‚ C++ä»£ç  â€”â€” `probe`ä»£ç è§£æž

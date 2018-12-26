@@ -636,15 +636,6 @@ void AutomaticallyObtainQuestions(BuildTreeStatsType &stats,
     summed_stats.resize(max_phone + 1, NULL);
   }
 
-  for (int32 i = 0; static_cast<size_t>(i) < summed_stats.size(); i++)
-  { // A check.
-    if (summed_stats[i] != NULL &&
-        !binary_search(phones.begin(), phones.end(), i))
-    {
-      KALDI_WARN << "Phone " << i << " is present in stats but is not in phone list [make sure you intended this].";
-    }
-  }
-
   EnsureClusterableVectorNotNull(&summed_stats); // make sure no NULL pointers in summed_stats.
   // will replace them with pointers to empty stats.
 
@@ -675,12 +666,6 @@ void AutomaticallyObtainQuestions(BuildTreeStatsType &stats,
     std::ostringstream ss;
     for (size_t i = 0; i < all_pdf_classes.size(); i++)
       ss << all_pdf_classes[i] << ' ';
-    KALDI_WARN << "All or all but one of your classes of phones had no data. "
-               << "Note that we only consider data where pdf-class is in the "
-               << "set ( " << ss.str() << ").  If you have an unusual HMM "
-               << "topology this may not be what you want; use the "
-               << "--pdf-class-list option to change this if needed. See "
-               << "also any warnings above.";
   }
 
   TreeClusterOptions topts;

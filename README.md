@@ -21,6 +21,7 @@
 |   4   | 2018-12-20 |         add folder for src-analysis         | Orange |
 |   5   | 2018-12-21 |      add c++ markdown for every folder      | Orange |
 |   6   |  2019-1-4  |                add main4.md                 | Orange |
+|   7   |  2019-1-4  |           add egs-analysis.sre10            | Lemon  |
 
 
 **Orange Learning Group**

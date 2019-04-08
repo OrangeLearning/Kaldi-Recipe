@@ -22,7 +22,10 @@
 |   5   | 2018-12-21 |      add c++ markdown for every folder      | Orange |
 |   6   |  2019-1-4  |                add main4.md                 | Orange |
 |   7   |  2019-1-4  |           add egs-analysis.sre10            | Orange |
-|   8   | 2019-1-28  |               add mfcc parts                | Orange |
+|   8   | 2019-1-28  |               add MFCC parts                | Orange |
+|   9   |  2019-2-1  |        start to analysis MFCC parts         | Orange |
+|  10   |  2019-4-8  |             add article folder              | Orange |
 
 
 **Orange Learning Group**
+

@@ -1,4 +1,4 @@
-# `compute-mfcc-feats.cc`的作用
+# `compute-mfcc-feats.cc`代码分析
 
 > featbin/compute-mfcc-feats.cc： 用于计算mfcc特征。
 >
